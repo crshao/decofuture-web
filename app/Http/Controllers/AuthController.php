@@ -21,7 +21,7 @@ class AuthController extends Controller
     		'name' => 'required',
     		'email' => 'required',
     		'password' => 'required',
-            'role' => 'required'
+        'role' => 'required'
     	]);
     	$user = User::where('email', $request->email)->first();
         
@@ -62,6 +62,7 @@ class AuthController extends Controller
     public function login(Request $request) {
         // dd($request->input());
         // return "test-login";
+
     	 $request->validate([
             'email' => 'required',
             'password' => 'required'
