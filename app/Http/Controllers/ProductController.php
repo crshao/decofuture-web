@@ -11,4 +11,9 @@ class ProductController extends Controller
     {
         return Product::all();
     }
+
+    public function show(Product $product)
+    {
+        return Product::find($product->id);
+    }
 }

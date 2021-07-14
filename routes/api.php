@@ -26,3 +26,4 @@ Route::post('register', [AuthController::class, 'register']);
 Route::get('test', [AuthController::class, 'test']);
 
 Route::get('product', [ProductController::class, 'index']);
+Route::get('product/{product}', [ProductController::class, 'show']);
