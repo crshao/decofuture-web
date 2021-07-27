@@ -27,3 +27,4 @@ Route::get('test', [AuthController::class, 'test']);
 
 Route::get('product', [ProductController::class, 'index']);
 Route::get('product/{product}', [ProductController::class, 'show']);
+Route::post('product', [ProductController::class, 'store']);
