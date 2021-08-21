@@ -30,7 +30,7 @@ class userSeeder extends Seeder
             "name" => "Qhurma",
             "email" => "Qhurma@gmail.com",
             "phone_number" => "085733296961",
-            "password" => Hash::make("12345"),
+            "password" =>  bcrypt('12345'),
             "role" => 1,
         ]);
     }
