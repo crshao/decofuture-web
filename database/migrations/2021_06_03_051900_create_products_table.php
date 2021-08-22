@@ -22,9 +22,9 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->string('color');
             $table->integer('stock');
-            $table->string('image'); //store location of image
+            $table->json('image'); //store location of image
             $table->integer("rating")->nullable();
-            $table->longText("ar_link")->nullable();
+            $table->json("ar_link")->nullable();
             $table->timestamps();
         });
     }

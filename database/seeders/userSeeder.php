@@ -14,6 +14,7 @@ class userSeeder extends Seeder
      *
      * @return void
      */
+
     public function run()
     {
         Role::create(
@@ -26,11 +27,13 @@ class userSeeder extends Seeder
                 'name' => 'operatorForklift',
             ],
         );
+
         User::create([
             "name" => "Qhurma",
             "email" => "Qhurma@gmail.com",
             "phone_number" => "085733296961",
             "password" =>  bcrypt('12345'),
+            // "address" => $array,
             "role" => 1,
         ]);
     }

@@ -17,7 +17,7 @@ class CreateMasterTransactionsTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->bigInteger("grand_total")->nullable();
-            $table->longText("address")->nullable();
+            $table->json("address")->nullable();
             $table->timestamps();
         });
     }

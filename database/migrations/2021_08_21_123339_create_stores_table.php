@@ -18,7 +18,7 @@ class CreateStoresTable extends Migration
             $table->bigInteger('user_id')->unsigned()->nullable();
             $table->string('name')->nullable();
             $table->boolean('status')->nullable();
-            $table->longText('address')->nullable();
+            $table->json('address')->nullable();
             $table->timestamps();
         });
     }

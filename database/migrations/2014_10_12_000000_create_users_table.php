@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->boolean('status')->nullable();
             $table->string('password');
             $table->integer('role');
-            $table->longText('address')->nullable();
+            $table->json('address')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
