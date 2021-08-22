@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Laravel\Passport\Client;
 use App\Models\User;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -157,8 +158,8 @@ class AuthController extends Controller
       }
 
       return response()->json($response, $http_response);
-    } catch (QueryException $th) {
-      return response()->json('data Not Found', Response::HTTP_NOT_FOUND);
+    } catch (ModelNotFoundException $th) {
+      return response()->json(['Message' => $th], Response::HTTP_NOT_FOUND);
     }
   }
   public function logout(Request $request)
