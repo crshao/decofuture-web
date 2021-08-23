@@ -17,14 +17,15 @@ class CreateProductsTable extends Migration
             $table->id();
             // $table->foreignId('seller_id')->constrained('users');
             $table->bigInteger("store_id")->unsigned()->nullable();
-            $table->string('name');
-            $table->string('description');
-            $table->integer('price');
-            $table->string('color');
-            $table->integer('stock');
-            $table->json('image'); //store location of image
+            $table->bigInteger("category_id")->unsigned()->nullable();
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->integer('price')->nullable();
+            $table->json('varian')->nullable();
+            // $table->integer('stock');
+            // $table->json('image'); //store location of image
             $table->integer("rating")->nullable();
-            $table->json("ar_link")->nullable();
+            // $table->json("ar_link")->nullable();
             $table->timestamps();
         });
     }

@@ -19,6 +19,7 @@ class DatabaseRelationship extends Migration
         });
         Schema::table('products', function (Blueprint $table) {
             $table->foreign('store_id')->references('id')->on('stores')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('product_categories')->onUpdate('cascade')->onDelete('cascade');
         });
         Schema::table('master_transactions', function (Blueprint $table) {
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
